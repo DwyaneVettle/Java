@@ -470,7 +470,7 @@ Person p2 = new Person("张三",20); // 有参构造创建对象
 
 ## 7.static关键字
 
-​	有时候，在处理问题时需要两个类在**同一个内存区域共享一个数据**。例如，在球类中PI这个常量，可能除了本类需要这个常量外，在另一个圆类中也需要这个常量。这时没有必要再两个类中同时创建PI常量，因为这样系统会将两个不在同一个类中定义的常量分配到不同的内存空间中。为了解决这个问题，可以将这个常量设置未静态的。PI常量在内存中被共享的布局如图所示：
+​	有时候，在处理问题时需要两个类在**同一个内存区域共享一个数据**。例如，在球类中PI这个常量，可能除了本类需要这个常量外，在另一个圆类中也需要这个常量。这时没有必要再两个类中同时创建PI常量，因为这样系统会将两个不在同一个类中定义的常量分配到不同的内存空间中。为了解决这个问题，可以将这个常量设置为静态的。PI常量在内存中被共享的布局如图所示：
 
 <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202302202204641.png" alt="image-20230220220423476" style="zoom:50%;" />
 
@@ -919,7 +919,144 @@ public class Demo02 {
 
 ## 10.super
 
-​	问题：在继承关系中，当子类重写父类的方法后，子类对象将无法直接访问父类被重写的方法。
+​	问题：在继承关系中，当子类重写父类的方法后，子类对象将无法直接访问父类被重写的方法。如果想要访问到父类的方法怎么办呢？
 
 ​	解决：`super`关键字就可以用来访问父类的成员，例如访问父类的构造方法、成员变量和成员方法。
 
+```java
+public class Demo03 {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        c.eat();
+    }
+}
+```
+
+​	如上代码我们只能访问到子类重写后的`eat`方法，如果想要继续访问父类的`eat()`方法怎么办呢？
+
+![image-20230322162900278](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303221629407.png)
+
+​	此时，我们需要在子类中采用`super`关键字去访问父类的成员，它就可以指代父类：
+
+```java
+public class Cat extends Animal{
+    // @Override强制检查方法是重写的，防止方法名或参数错误
+    @Override
+    public void eat() {
+        // 通过super关键字调用父类成员
+        super.eat();
+        System.out.println("猫吃鱼。。。");
+    }
+}
+```
+
+​	这个时候观察`Demo03`类中的输出：
+
+![image-20230322163136214](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303221631307.png)
+
+​	同理，如果要创建`Cat`类的有参构造方法，我们发现子类`Cat`没有成员变量，也就没有办法通过`this`关键字进行指向，但是父类有这些成员变量，我们可以通过`super`调用到父类的成员变量：
+
+```java
+public Cat(String name, int age, String color) {
+        super(name, age, color);
+}
+```
+
+
+
+## 11.Object
+
+​	Java为我们提供了一个类`Object`，该类是**所有类的父类**，即每个类都直接或间接继承自该类，所以我们常常称`Object`为**超类、基类**。当定义一个类时，如果没有关键字`extends`进行指向，那么该类就会默认继承自`Object`。
+
+```java
+public class Person  extends Object{
+    private String name;
+    private int age;
+    
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+}
+```
+
+​	继承`Object`后，就可以用到父类的`toString`方法等，并可以重写父类的`toString`方法。按住`Ctrl`键点击`Object`就可以看到它的所有的方法，子类都可以使用。
+
+```java
+public class Demo01 {
+    public static void main(String[] args) {
+        Person p = new Person();
+        System.out.println(p); // 包名+类名+地址值
+        System.out.println(p.toString());
+        System.out.println(p.getClass()); // class Object.Person
+    }
+}
+```
+
+​	`Object`类的常用方法如下：
+
+| 方法声明          | 功能描述                                                     |
+| ----------------- | ------------------------------------------------------------ |
+| boolean  equals() | 指示其他某个对象是否与此对象“相等”                           |
+| class getClass()  | 返回此 `Object` 的运行时类                                   |
+| int  hashCode()   | 返回该对象的哈希码值                                         |
+| String toString() | 返回该对象的字符串表示                                       |
+| void finalize()   | 当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法 |
+
+
+
+## 12.final关键字
+
+​	`final`关键字可用于**修饰类、变量和方法**。它有"不可更改"或"最终的"的含义，因此被`final`修饰后都有以下特点：
+
+- final修饰的类不能继承
+- final修饰的方法不能被重写
+- fianl修饰的变量是常量，只能赋值一次
+
+Animal类被`final`修饰后不能被Dog类继承，并且Animal类的方法被`final`修饰后也不能被重写：
+
+```java
+public final class Animal {
+    public final void eat() {
+        System.out.println("Animal方法");
+    }
+}
+```
+
+```java
+public class Dog extends Animal {
+    public void eat() {
+        System.out.println("子类重写的方法。。");
+    }
+}
+```
+
+报错信息：
+
+![image-20230322170144434](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303221701570.png)
+
+```java
+public class Demo02 {
+    public static void main(String[] args) {
+        final int a = 10;
+        a = 20;
+        
+    }
+}
+```
+
+​	`final`修饰的变量将不允许被修改：
+
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303221703374.png" alt="image-20230322170316265" style="zoom:33%;" />
+
+## 13.抽象类
+
+​	普通类是一个完整的功能类，可以直接产生实例化对象，并且在普通类中可以包含有构造方法、普通方法、static方法、变量、常量等。而抽象类是指在普通类的结构内部增加抽象方法的组成部分。
+
+​	那么什么是抽象方法呢？在所有的普通方法内部都有"{}"表示方法体，有方法体的方法一定是能够被对象直接访问的。而**抽象方法是没有方法体的方法，同时抽象方法还必须使用关键字`abstract`关键字修饰**。
+
+​	**拥有抽象方法的类就是抽象类，抽象类要使用`abstract`关键字声明**。
