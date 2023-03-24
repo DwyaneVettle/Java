@@ -1057,6 +1057,410 @@ public class Demo02 {
 
 ​	普通类是一个完整的功能类，可以直接产生实例化对象，并且在普通类中可以包含有构造方法、普通方法、static方法、变量、常量等。而抽象类是指在普通类的结构内部增加抽象方法的组成部分。
 
-​	那么什么是抽象方法呢？在所有的普通方法内部都有"{}"表示方法体，有方法体的方法一定是能够被对象直接访问的。而**抽象方法是没有方法体的方法，同时抽象方法还必须使用关键字`abstract`关键字修饰**。
+​	那么什么是抽象方法呢？在所有的普通方法内部都有"{}"表示方法体，有方法体的方法一定是能够被对象直接访问的。而**抽象方法是没有方法体的方法，同时抽象方法还必须使用关键字`abstract`关键字修饰**。**当我们进行父类方法的抽取时，有些方法每个子类的实现都不一样，这个时候我们就该把这个方法定义为抽象方法。**
 
 ​	**拥有抽象方法的类就是抽象类，抽象类要使用`abstract`关键字声明**。
+
+​	定义`Animal`类。除了基本的属性外，有两个方法`eat`和`sleep`，其中`eat`方法为抽象方法，因为不知道每个具体的子类怎么实现：
+
+```java
+package abstract_test;
+
+public abstract class Animal {
+    private String name;
+    private int age;
+    private String color;
+
+    public Animal() {
+    }
+
+    public Animal(String name, int age, String color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    // 抽象方法
+    public abstract void eat();
+
+    public void sleep() {
+        System.out.println("睡觉了...");
+    }
+}
+
+```
+
+​	子类`Dog`和`Cat`，重写抽象方法，实现子类的需求：
+
+```java
+package abstract_test;
+
+public class Cat extends Animal{
+    @Override
+    public void eat() {
+        System.out.println("猫吃鱼。。。");
+    }
+}
+
+```
+
+```java
+package abstract_test;
+
+public class Dog extends Animal{
+    @Override
+    public void eat() {
+        System.out.println("狗吃肉。。。");
+    }
+}
+
+```
+
+​	测试类：
+
+```java
+package abstract_test;
+
+public class Test01 {
+
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.sleep();
+
+        System.out.println("=======");
+
+        Cat cat = new Cat();
+        cat.eat();
+        cat.sleep();
+
+
+    }
+}
+```
+
+​	运行结果：
+
+![image-20230324093810093](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303240938256.png)
+
+​	需要注意的是：**抽象类不能直接创建对象使用**：
+
+![image-20230324094019922](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303240940033.png)
+
+
+
+
+
+## 14.接口
+
+​	如果一个抽象类中所有的方法都是抽象的，则可以将这个类定义称另一种形式---**接口**。接口是一种特殊的抽象类，它不能包含普通方法，其内部的所有方法都是抽象方法，它将抽象进行得更为彻底。
+
+​	在JDK8中对抽象类进行了重新定义，接口中除了抽象方法外，还可以有默认方法和静态方法，默认方法使用`default`修饰，静态方法使用`static`修饰，并且这两种方法都允许有方法体。
+
+​	接口的定义使用了关键字`interface`来声明，语法格式如下：
+
+```java
+[修饰符]  interface  接口名{
+    public static final 常量类型  常量名 = 值;
+    public abstract 返回值  方法名(参数);
+    public default 返回值  方法名(参数){}
+    public static 返回值  方法名(参数){}
+}
+```
+
+​	接口都需要通过类去实现其功能，实现的关键字为`implement` 。它打破了Java单继承的局限，因为Java支持**多实现**。
+
+​	**注意：**接口不能有构造方法，也就不能直接创建对象使用。
+
+​	定义接口`Animal`：
+
+```java
+public interface Animal {
+
+    public static final int ID = 1; // 常量id
+
+    // 抽象方法
+    public abstract void breath();
+
+    // 默认方法
+    public default void getType(String type) {
+        System.out.println("当前动物属于" + type);
+    }
+    // 静态方法
+    public static int getId() {
+        return ID;
+    }
+}
+
+```
+
+​	再定义接口`LandAnimal：`
+
+```java
+public interface LandAnimal {
+    void run();
+}
+```
+
+
+
+​	创建`Dog`类实现接口`Animal`：
+
+```java
+public class Dog implements Animal,LandAnimal{
+    @Override
+    public void breath() {
+        System.out.println("狗在呼吸。。。");
+    }
+
+    @Override
+    public void getType(String type) {
+        Animal.super.getType(type);
+    }
+
+    @Override
+    public void run() {
+        System.out.println("狗可以跑。。");
+    }
+}
+
+
+```
+
+​	创建测试类：
+
+```java
+public class Test01 {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.breath();
+        dog.getType("犬科");
+        dog.run();
+    }
+}
+
+```
+
+​	运行结果：
+
+![image-20230324100126340](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303241001431.png)
+
+
+
+## 15.多态
+
+​	在Java中，多态指不同类的对象在调用同一个方法时所呈现出的多种不同行为。通过多态，消除了类之间的耦合关系，大大提高了程序的可拓展性和可维护性。
+
+​	多态的前提条件：
+
+- 继承或实现关系
+- 有方法的重写
+- 父类引用指向子类对象
+
+```java
+public class Aniaml {
+    int age = 2;
+    public void eat() {
+        System.out.println("动物吃肉。。。");
+    }
+}
+```
+
+```java
+public class Dog extends Aniaml{
+	int age = 5;
+    @Override
+    public void eat() {
+        System.out.println("狗吃肉。。。");
+    }
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        // 父类引用指向子类对象--多态的提现
+        Aniaml a = new Dog();
+        System.out.println(a.age); // 2-父类的
+        a.eat(); // 狗吃肉
+    }
+}
+```
+
+​	多态的成员访问特点：
+
+- 成员变量：编译看父类，访问父类的成员变量
+- 成员方法：编译看父类，运行看子类
+
+
+
+## 16.内部类
+
+​	在Java中，允许一个类的内部定义类，这样称为内部类，这个类所在的类称为外部类。Java内部类分为：成员内部类、局部内部类、静态内部类、匿名内部类。
+
+### 16.1.成员内部类
+
+```java
+// 成员内部类
+public class Outer {
+    // 外部类的成员变量和方法
+    int outer = 10;
+    public void outerMethod() {
+        System.out.println("我是外部类方法。");
+    }
+    // 成员内部类
+    class Inner {
+        // 内部类的成员变量和方法
+        int inner = 20;
+        public void innerMethod() {
+            System.out.println("我是内部类的方法。。");
+            System.out.println(outer);
+            outerMethod();
+        }
+    }
+}
+```
+
+
+
+```java
+/*
+*   创建内部类对象的格式：外部类.内部类 对象名 = new 外部类对象().new 内部类对象()
+*       内部类可以访问内部类的成员
+* */
+public class Test01 {
+    public static void main(String[] args) {
+        Outer.Inner oi = new Outer().new Inner();
+        oi.innerMethod();
+        System.out.println(oi.inner);
+    }
+}
+```
+
+
+
+### 16.2.局部内部类
+
+​	局部内部类指在一个方法中定义类。我们在上述`Outer`中定义方法，并在方法中定义局部内部类：
+
+```java
+public void method01() {
+        class Inner01 {
+            int inner01 = 30;
+            public void method02() {
+                System.out.println("局部内部类的方法。");
+            }
+        }
+```
+
+​	局部内部类的局限性很大，它只能在该声明方法中去创建对象，一般很少使用这种方式创建内部类。
+
+
+
+### 16.3.静态内部类
+
+​	静态内部类即用`static`关键字声明成员内部类，它创建对象的方式为：
+
+```java
+外部类名.静态内部类名 对象名 = new 外部类名.静态内部类名();
+```
+
+​	在`Outer`中添加静态内部类：
+
+```java
+static class Inner02 {
+        int inner02 = 40;
+        public void method03() {
+            System.out.println("静态内部类方法" + inner02);
+            // System.out.println(outer);不能使用外部类，静态类先存在，如果要访问，必须将外部变量设置为静态
+        }
+    }
+```
+
+​	创建测试类：
+
+```java
+public class Test02 {
+    public static void main(String[] args) {
+        Outer.Inner02 oi = new Outer.Inner02();
+        System.out.println(oi.inner02);
+        oi.method03();
+    }
+}
+
+```
+
+![image-20230324115306861](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202303241153985.png)
+
+
+
+
+
+### 16.4.匿名内部类
+
+​	匿名内部类即是没有名字的内部类。定义的格式为：
+
+```java
+new 类名/接口名() {
+    // 重写抽象方法
+}
+```
+
+​	内部类可以独立地继承或实现一个类的接口，无论外部类是否继承或实现，内部类不受影响。
+
+```java
+public abstract class Animal {
+
+    abstract void eat();
+}
+```
+
+
+
+```java
+public class Test {
+
+    public static void main(String[] args) {
+        // 等效于Animal父类的子类对象
+        // 第一种直接调用方式
+        /*new Animal() {
+            @Override
+            public void eat() {
+                System.out.println("狗吃肉");
+            }
+        }.eat();*/
+        // 第二种返回对象调用
+        Animal a = new Animal() {
+            @Override
+            public void eat() {
+                System.out.println("狗吃肉");
+            }
+        };
+        a.eat();
+    }
+}
+```
+

@@ -1,4 +1,4 @@
-package Object;
+package object;
 
 public final class Animal {
     public final void eat() {
