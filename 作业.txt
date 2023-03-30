@@ -7,9 +7,19 @@ week04:
 2.通过汽车类创建不少于3个对象，调用对象的属性和行为
 
 王清平---了解Java 8 大基础数据类型
+byte short int long float double char boolean 
+
+true 
+'aa'
 
 week05代码：2遍
 
+week06:
+1.创建一个Father类，创建Son01和Son02类继承父类，
+子类使用父类中的name,age属性和eat()方法
+
+
+https://abc.oracleoaec.com/    用你的电话号作为账号和密码
 
 
 
