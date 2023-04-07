@@ -1464,3 +1464,125 @@ public class Test {
 }
 ```
 
+
+
+## 17.Lambda表达式
+
+​	Lambda表达式是JDK8中的一个新特性，它使用一个间接的表达式来表达接口，同时Lambda表达式也简化了对集合、数组、stream流的操作。
+
+- 创建Animal接口：
+
+```java
+public interface Animal {
+    
+    void eat();
+}
+```
+
+- 创建测试类：
+
+```java
+public class Test01 {
+
+    public static void main(String[] args) {
+        useAnimal(new Animal() {
+            @Override
+            public void eat() {
+                System.out.println("狗吃肉，猫吃鱼，老鼠儿子会打洞。。");
+            }
+        });
+    }
+    public static void useAnimal(Animal a) {
+        a.eat();
+    }
+}
+```
+
+​	我们发现如上案例使用匿名内部类的方式太过于复杂，这个时候我们就可以采用Lambda表达式，使用Lambda表达式的前提必须是一个接口，且接口中只有一个抽象方法。它的使用格式为：
+
+```java
+(数据类型 参数1,数据类型  参数2,...) -> {
+    方法体;
+}
+/*
+():代表要执行接口中的抽象方法，如果方法中有参数，就需要传递参数
+->:固定格式，将小括号中的参数传递给后面的方法体
+{}:代表要实现的抽象方法的方法体
+*/
+```
+
+​	使用Lambda表达式实现：
+
+```java
+useAnimal(() -> {
+            System.out.println("狗吃肉，猫吃鱼，老鼠儿子会打洞。。");
+});
+```
+
+
+
+​	我们发现Lambda表达式简洁明了，那么就能完全使用Lambda表达式代替匿名内部类了吗？其实不然，我们发现它只能在接口中使用，而类中无法实现。
+
+​	接口中有且只有一个抽象方法时才能使用Lambda表达式代替匿名内部类，这是因为Lambda表达式是基于**函数式接口**实现的。所谓**函数式接口就是有且只有一个抽象方法的接口**。Lambda表达式就是Java中函数式接口的体现，只有确保接口中有且只有抽象方式，Lambda才能顺利地推导出所实现的这个接口中的方法。
+
+​	在JDK8中，接口上标注**@FunctionalInterface**注解的即为函数式接口，内部有且只有一个抽象方法。
+
+-  无参数无返回值函数式接口的使用
+
+​	创建InterA:
+
+```java
+// @FunctionalInterface用于约束函数式接口
+@FunctionalInterface
+public interface InterA {
+
+    void print();
+}
+```
+
+​	创建测试类：
+
+```java
+public class Test02 {
+
+    public static void main(String[] args) {
+        method(() -> {
+            System.out.println("hello,Lambda");
+        });
+    }
+    
+    public static void method(InterA i) {
+        i.print();
+    }
+}
+```
+
+- 有参数有返回值的函数式接口：
+
+  创建InterB:
+
+```java
+@FunctionalInterface
+public interface InterB {
+    
+    int getSum(int num1,int num2);
+}
+```
+
+​	创建测试类：
+
+```java
+public class Test03 {
+    public static void main(String[] args) {
+        method(10,20,(num1,num2) -> {
+            return num1 + num2;
+        });
+    }
+    public static void method(int num1,int num2,InterB i) {
+        int result = i.getSum(num1,num2);
+        System.out.println(result);
+    }
+}
+
+```
+
