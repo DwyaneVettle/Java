@@ -1,0 +1,5 @@
+com\sccs\service\UserService.class
+com\sccs\entity\User.class
+com\sccs\controller\UserController.class
+com\sccs\dao\UserDao.class
+com\sccs\Person.class

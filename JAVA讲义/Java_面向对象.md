@@ -1302,7 +1302,7 @@ public class Dog extends Aniaml{
 ```java
 public class Test {
     public static void main(String[] args) {
-        // 父类引用指向子类对象--多态的提现
+        // 父类引用指向子类对象--多态的体现
         Aniaml a = new Dog();
         System.out.println(a.age); // 2-父类的
         a.eat(); // 狗吃肉
@@ -1585,4 +1585,58 @@ public class Test03 {
 }
 
 ```
+
+
+
+
+
+
+
+### 课后练习:
+
+1.创建类A，用类B继承，并且重写A类中的方法;
+
+2.创建类C，有属性name,age，方法method01()，创建C类的对象给
+
+name赋值为张三，age赋值为20，并调用method01()方法，属性需要
+
+使用封装
+
+3.创建函数式接口接口D，包含一个抽象方法，用lambda表达式调用
+
+这个方法
+
+
+
+
+
+王宇航、付昌伟、王锐、夏吉、何其东：week04-week08*1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
