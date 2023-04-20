@@ -1,6 +1,6 @@
 # Java_常用API
 
-API即**A**pplication **P**rogramming **I**nterface，即应用程序接口。一般来说API就是软件组件之间信息交互的桥梁，通过它无需访问源码。API除了有`应用程序接口`的含义外，还特质API的说明文档，也称为帮助文档。
+​	API即**A**pplication **P**rogramming **I**nterface，即应用程序接口。一般来说API就是软件组件之间信息交互的桥梁，通过它无需访问源码。API除了有`应用程序接口`的含义外，还特质API的说明文档，也称为帮助文档。
 
 ## 1.字符串的操作
 
@@ -38,9 +38,9 @@ System.out.println(s4); // abc
 
 - **判断功能：**
   - `boolean equals(String S)`：判断两个字符串是否相同，区分大小写
-  - `boolean equalsIgnore(String s)`：判断两个字符串是否相同，忽略大小写
-  - `boolean startWith(String s)`：判断当前字符串是否以s开头
-  - `boolean endWith(String s)`：判断当前字符串是否以s结尾
+  - `boolean equalsIgnoreCase(String s)`：判断两个字符串是否相同，忽略大小写
+  - `boolean startsWith(String s)`：判断当前字符串是否以s开头
+  - `boolean endsWith(String s)`：判断当前字符串是否以s结尾
   - `boolean contains(String s)`：判断当前字符串是否包含s
   - `boolean isEmpty()`：判断字符串是否为空
 
