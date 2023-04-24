@@ -351,3 +351,147 @@ public class RandomTest {
 }
 ```
 
+## 6.包装类
+
+​	虽然Java是面向对象的语言，但它的8大基础数据类型却不支持面向对象的编程机制（没有属性和方法），在Java中，很多类的方法都需要接收引用类型的对象，此时就无法将一个基本数据类型的值传入。
+
+​	为了解决这个问题，JDK中提供了一系列的包装类，通过这些包装类可以将基本数据类型的值包装为引用数据对象。
+
+| 基础数据类型 | 包装类-引用数据 |
+| ------------ | --------------- |
+| byte         | Byte            |
+| short        | Short           |
+| int          | Integer         |
+| long         | Long            |
+| float        | Float           |
+| double       | Double          |
+| char         | Character       |
+| boolean      | Boolean         |
+
+​	在JDK1.5后新增了一个特性，可以实现数据的自动拆装箱：
+
+- 自动拆箱：将引用数据类型转为基本数据类型
+- 自动装箱：将基本数据类型转为引用数据类型
+
+包装类的属性和方法有很多，我们以`Integer`为例
+
+```java
+// 属性
+static int MAX_VALUE 		值为 231－1 的常量，它表示 int 类型能够表示的最大值。
+static int MIN_VALUE 		值为 －231 的常量，它表示 int 类型能够表示的最小值。
+static int SIZE  			用来以二进制补码形式表示 int 值的比特位数。
+static Class<Integer> TYPE  表示基本类型 int 的 Class 实例。
+    
+    
+// 构造方法
+Integer(int value) 			构造一个新分配的 Integer 对象，它表示指定的 int 值。
+Integer(String s)			构造一个新分配的 Integer 对象，它表示 String 参数所指示的 int 值。
+    
+// 成员方法
+static int parseInt(String s) 将字符串参数作为有符号的十进制整数进行解析。
+static int parseInt(String s, int radix) 使用第二个参数指定的基数，将字符串参数解析为有符号的整数。
+```
+
+其他常用的成员方法可以参考JDK文档。
+
+```java
+public class Test {
+
+    public static void main(String[] args) {
+        Integer i = 5;  // 自动装箱
+        System.out.println(i);
+        System.out.println(i + 5); // 自动拆箱-将包装类型转为基础类型
+
+        Integer i1 = new Integer(5);
+        Integer i2 = new Integer("5");
+        System.out.println(i1 + i2); // 10
+
+        int i3 = Integer.parseInt("123");
+        System.out.println(i3); // 123
+        // int i4 = Integer.parseInt("a123");
+        // System.out.println(i4); // NumberFormatException
+        // int i5 = Integer.parseInt("123a");
+        // System.out.println(i5); // NumberFormatException
+        
+    }
+}
+```
+
+
+
+**所有的包装类都具有一个`parseXXX(String s)`的方法，可以将字符串类型转换为指定类型。**
+
+拓展：在`Integer`类中，不仅有`parseInt()`方法可以将字符串类型转换为`Integer`，还有一个方法也可以办到，那就是`valueOf()`方法，起始我们查阅底层代码可以得知，`valueOf()`方法是从`Integer`的常量池（缓冲池）中（-128-127）获取的，所以如果**确定的数值是在缓冲池中的情况下，那么使用`valueOf()`明显比`parseInt()`更为合适**：
+
+![image-20230424142345878](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230424142345878.png)
+
+![image-20230424142409107](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230424142409107.png)
+
+
+
+## 7.日期和时间类
+
+### 7.1.Date类
+
+​	Date类用于在Java中处理时间和日期，由于这个类在JDK1.0就已经存在，所有该类中的部分方法已经过期，但在后期，JDK又新增了一些类来处理日期，所以一般处理日期类时已不再采用Date类。
+
+​	Date类的构造方法有很多，可根据自己对日期时间的格式化需求进行创建对象：
+
+![image-20230424142804851](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230424142804851.png)
+
+​	需要注意的时，不仅在Java，在其他开发语言中，处理日期时间的类的起始时间都是从1970年1月1日0时0分0秒开始的，即Unix时间戳。
+
+```java
+public class DateTest {
+
+    public static void main(String[] args) {
+        // 无参构造
+        Date date = new Date();
+        System.out.println(date); // 当前时间
+
+        // 有参构造
+        // toLocaleString() 根据本地格式显示时间
+        Date date1 = new Date(1682317996857L);
+        System.out.println(date1.toLocaleString());
+
+    }
+}
+```
+
+
+
+### 7.2.Calendar类
+
+​	Calendar类用于完成时间和日期字段的操作，它可以通过特定的方法设置和读取日期的特定部分，如年、月、日、时、分、秒等。**Calendar类是一个抽象类，不能被实例化。**但我们可以调用它的静态方法`getInstance()`来得到一个Calendar对象，然后才能调用其相应的方法。
+
+```java
+public class CalendarTest {
+
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance(); // 获取到当前时间
+        System.out.println(cal);
+        // 获取年月日
+        int month = cal.get(Calendar.MONTH);
+        System.out.println(month);  // 0-11
+        int year = cal.get(Calendar.YEAR);
+        System.out.println(year);
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        System.out.println(day); // 一周中第几天，从星期天开始
+
+    }
+}
+```
+
+​	常用方法参考JDK文档。
+
+### 7.3.JDK8新增时间日期类
+
+​	为了满足更多的需求，JDK8中新增了一个`java.time`包，在该包下包含了更多日期和时间类，以下罗列了部分类，其他新增类可以参考API文档或在线API：https://www.matools.com/api/java8
+
+| 类名      | 描述                                                         |
+| --------- | ------------------------------------------------------------ |
+| Clock     | 用于获取指定时区的日期、时间等                               |
+| DayOfWeek | 枚举类，定义了一周周一到周天的枚举信息                       |
+| Duration  | 表示持续时间。该类提供了ofXXX()方法用于获取指定时间的小时、分钟、秒数等 |
+| Instant   | 表示一个具体时刻，可以精确到纳秒。该类提供的静态方法now()用来获取当前时刻，提供了方法now(Clock clock)来获取clock对应的时刻。同时还提供了一系列的plusXXX()方法来获取当前时刻基础上加上一段时间，以及一系列的minusXXX()方法在当前时刻上减去一段时间。 |
+
