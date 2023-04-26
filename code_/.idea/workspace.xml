@@ -42,7 +42,7 @@
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.CalendarTest">
+  <component name="RunManager" selected="Application.DateTimeFormatTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -69,6 +69,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DateFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="API.date.DateFormatTest" />
+      <module name="code_" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="API.date.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="API.date.DateTest" />
       <module name="code_" />
@@ -82,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RuntimeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.runtime.RuntimeTest" />
+    <configuration name="DateTimeFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="API.date.DateTimeFormatTest" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.runtime.*" />
+          <option name="PATTERN" value="API.date.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,25 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SystemTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.system.SystemTest" />
+    <configuration name="SimpleDateFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="API.date.SimpleDateFormatTest" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.system.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.datatype.Test" />
-      <module name="code_" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="API.datatype.*" />
+          <option name="PATTERN" value="API.date.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DateTimeFormatTest" />
+        <item itemvalue="Application.SimpleDateFormatTest" />
+        <item itemvalue="Application.DateFormatTest" />
         <item itemvalue="Application.CalendarTest" />
         <item itemvalue="Application.DateTest" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.RuntimeTest" />
-        <item itemvalue="Application.SystemTest" />
       </list>
     </recent_temporary>
   </component>

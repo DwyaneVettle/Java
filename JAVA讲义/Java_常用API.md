@@ -423,9 +423,9 @@ public class Test {
 
 拓展：在`Integer`类中，不仅有`parseInt()`方法可以将字符串类型转换为`Integer`，还有一个方法也可以办到，那就是`valueOf()`方法，起始我们查阅底层代码可以得知，`valueOf()`方法是从`Integer`的常量池（缓冲池）中（-128-127）获取的，所以如果**确定的数值是在缓冲池中的情况下，那么使用`valueOf()`明显比`parseInt()`更为合适**：
 
-![image-20230424142345878](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230424142345878.png)
+![image-20230424142345878](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202304261517219.png)
 
-![image-20230424142409107](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230424142409107.png)
+![image-20230424142409107](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202304261517677.png)
 
 
 
@@ -494,4 +494,100 @@ public class CalendarTest {
 | DayOfWeek | 枚举类，定义了一周周一到周天的枚举信息                       |
 | Duration  | 表示持续时间。该类提供了ofXXX()方法用于获取指定时间的小时、分钟、秒数等 |
 | Instant   | 表示一个具体时刻，可以精确到纳秒。该类提供的静态方法now()用来获取当前时刻，提供了方法now(Clock clock)来获取clock对应的时刻。同时还提供了一系列的plusXXX()方法来获取当前时刻基础上加上一段时间，以及一系列的minusXXX()方法在当前时刻上减去一段时间。 |
+
+​	其他新增时间日期类的使用可以参考API文档。
+
+
+
+### 7.4.DateFormat
+
+​	`DateFormat`专门用于将日期格式化为字符串或将特定格式显示的日期的字符串转换为一个`Date`对象。
+
+​	`DateFormat`是一个抽象类，不能被实例化，但它提供了一系列的静态方法来获取它的实例化对象。
+
+| 方法                                                         | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| tatic DateFormat getInstance()                               | 获取在日期和时间上使用SHORT样式的默认日期/时间格式化程序     |
+| static DateFormat getDateInstance(int style)                 | 获取默认的 [`FORMAT`](../../java/util/Locale.Category.html#FORMAT)区域设置的给定格式化样式的日期格式化  [程序](../../java/util/Locale.Category.html#FORMAT) |
+| static DateFormat getDateInstance()                          | 获取默认格式化样式为默认的 [`FORMAT`](../../java/util/Locale.Category.html#FORMAT)语言环境的日期格式化程序 |
+| static DateFormat getDateTimeInstance(int dateStyle,  int timeStyle) | 获取默认的 [`FORMAT`](../../java/util/Locale.Category.html#FORMAT)区域设置的给定日期和时间格式化样式的日期/时间格式化程序 |
+| String format(Date date)                                     | 将日期格式化成日期/时间字符串                                |
+| Date parse(String source)                                    | 从给定字符串的开始解析文本以生成日期                         |
+
+```java
+public class DateFormatTest {
+
+    public static void main(String[] args) throws ParseException {
+        // 创建完整格式化时间对象
+        DateFormat df01 = DateFormat.getDateInstance(DateFormat.FULL);
+        // 创建长格式化时间对象
+        DateFormat df02 = DateFormat.getDateInstance(DateFormat.LONG);
+        // 创建标准格式化时间对象
+        DateFormat df03 = DateFormat.getDateInstance(DateFormat.MEDIUM);
+        // 创建段格式化时间对象
+        DateFormat df04 = DateFormat.getDateInstance(DateFormat.SHORT);
+
+
+        Date date = new Date(); // 当前时间
+        System.out.println("完整版格式为：" + df01.format(date));
+        System.out.println("长格式为：" + df02.format(date));
+        System.out.println("标准格式为：" + df03.format(date));
+        System.out.println("短格式为：" + df04.format(date));
+
+
+        // 将字符串日期解析成日期对象
+        String s = "2023年5月1日";
+        System.out.println(df02.parse(s));
+    }
+}
+```
+
+
+
+### 7.5.SimpleDateFormat
+
+​	`SimpleDateFormat`是`DateFormat`的一个子类，但它比`DateFormat`更加灵活，它可以使用`new`关键字来创建对象，在创建对象时，它的构造参数需要接收一个表示日期格式的字符串参数。
+
+![image-20230426151713819](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202304261517976.png)
+
+```java
+public class SimpleDateFormatTest {
+
+    public static void main(String[] args) throws ParseException {
+        // 公园2023年5月1日  星期一 12:00:00
+        SimpleDateFormat sdf = new SimpleDateFormat("Gyyyy年MM月dd日 E HH:mm:ss");
+        // 当前日期对象
+        Date date = new Date();
+        System.out.println(sdf.format(date));
+
+        System.out.println("========");
+        // 将一个字符串日期对象解析成日期对象
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        String str = "2023-05-01";
+        System.out.println(sdf1.parse(str));
+
+    }
+}
+```
+
+
+
+### 7.6.DateTimeFormatter
+
+​	`DateTimeFormatter`类的使用方式和`SimpleDateFormat`类似，包含了大量的常量和操作时间的方法来创建格式化对象。
+
+```java
+public class DateTimeFormatTest {
+
+    public static void main(String[] args) {
+        // 本地日期时间对象
+        LocalDateTime ldt = LocalDateTime.now();
+        // 通过静态方法格式化对象
+        DateTimeFormatter dtf1 = DateTimeFormatter.ISO_DATE_TIME;
+        String format = dtf1.format(ldt);
+        System.out.println(format);
+        // 其他方法参考文档
+    }
+}
+```
 
