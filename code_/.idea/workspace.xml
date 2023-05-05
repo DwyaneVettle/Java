@@ -42,7 +42,7 @@
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DateTimeFormatTest">
+  <component name="RunManager" selected="Application.Test03">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -56,12 +56,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalendarTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.date.CalendarTest" />
+    <configuration name="HashMapIterator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="colloctions.HashMapIterator" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.date.*" />
+          <option name="PATTERN" value="colloctions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,12 +69,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.date.DateFormatTest" />
+    <configuration name="HashMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="colloctions.HashMapTest" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.date.*" />
+          <option name="PATTERN" value="colloctions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.date.DateTest" />
+    <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="colloctions.Test01" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.date.*" />
+          <option name="PATTERN" value="colloctions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateTimeFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.date.DateTimeFormatTest" />
+    <configuration name="Test02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="colloctions.Test02" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.date.*" />
+          <option name="PATTERN" value="colloctions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleDateFormatTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="API.date.SimpleDateFormatTest" />
+    <configuration name="Test03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="colloctions.Test03" />
       <module name="code_" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="API.date.*" />
+          <option name="PATTERN" value="colloctions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DateTimeFormatTest" />
-        <item itemvalue="Application.SimpleDateFormatTest" />
-        <item itemvalue="Application.DateFormatTest" />
-        <item itemvalue="Application.CalendarTest" />
-        <item itemvalue="Application.DateTest" />
+        <item itemvalue="Application.Test03" />
+        <item itemvalue="Application.HashMapIterator" />
+        <item itemvalue="Application.HashMapTest" />
+        <item itemvalue="Application.Test02" />
+        <item itemvalue="Application.Test01" />
       </list>
     </recent_temporary>
   </component>

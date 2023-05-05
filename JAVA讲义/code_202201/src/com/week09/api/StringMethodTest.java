@@ -4,7 +4,8 @@ public class StringMethodTest {
 
     public static void main(String[] args) {
             // method01();
-            method02();
+            // method02();
+        method03();
     }
 
     public static void method01() {
@@ -42,5 +43,19 @@ public class StringMethodTest {
         System.out.println(s02.concat("java")); // HelloWorldjava
         System.out.println(s02.substring(5)); // World
         System.out.println(s02.substring(5,7)); // Wo
+    }
+    
+    public static void method03() {
+        /*
+        - `char[] toCharArray()`：将字符串转为字符数组
+        - `byte[] getBytes()`：将字符串转为字节数组
+        - `String toUpperCase()`：将字符串转为大写
+        - `String toLowerCase()`：将字符串转为小写
+        - `String valueOf(int i)`：将数据转为字符串
+        * */
+        
+        String s1 = "HelloWorld";
+        char[] arr = s1.toCharArray();
+        System.out.println(arr);
     }
 }

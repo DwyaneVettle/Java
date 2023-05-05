@@ -85,7 +85,7 @@ public static void method02() {
 - **转换功能：**
   - `char[] toCharArray()`：将字符串转为字符数组
   - `byte[] getBytes()`：将字符串转为字节数组
-  - `String toUpperCase()`：将字符串转为小写
+  - `String toUpperCase()`：将字符串转为大写
   - `String toLowerCase()`：将字符串转为小写
   - `String valueOf(int i)`：将数据转为字符串
 
@@ -286,7 +286,7 @@ public class RuntimeTest {
 
 ​	常用方法如下：
 
-- `Math.obs(int num)`：计算绝对值
+- `Math.abs(int num)`：计算绝对值
 - `Math.sin(double num)`：计算余弦
 - `Math.cos(double num)`：计算正弦
 - `Math.tan(double num)`：计算正切
@@ -589,5 +589,18 @@ public class DateTimeFormatTest {
         // 其他方法参考文档
     }
 }
+```
+
+
+
+
+
+# 练习
+
+```java
+1.现有字符串Hello  
+    1.1.将字符串转为大写
+    1.2.将字符串不改变原有字符串的情况下拼接World
+2.用Math类随机生成一个0-100之间的整数
 ```
 
