@@ -261,7 +261,7 @@ Runtime run = Runtime.getRuntime();
 | ------------------------- | -------------- |
 | int availableProcessors() | 获取处理器个数 |
 | long freeMemory()         | 获取空闲内存   |
-| long maxMemory()          | 获取最大内容   |
+| long maxMemory()          | 获取最大内存   |
 | Process exec()            | 执行DOS命令    |
 
 ```java

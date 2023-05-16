@@ -6,7 +6,7 @@
 
 ​	为了保存这些数目不确定的对象，Java中提供了集合，**集合可以存储任意类型的对象，并且长度可变**。
 
-![image-20230426162417821](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20230426162417821.png)
+![image-20230426162417821](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305102155620.png)
 
 ## 1.Collection接口
 
@@ -734,3 +734,45 @@ public class Test03 {
 文件新增：
 
 ![image-20230505161448728](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305051614803.png)
+
+
+
+## 5.Stream流
+
+​	JDK8新增了一个`Stream`流接口，该接口可以将集合、数组中的元素转换为`Stream`流的形式，并结合`Lambda`表达式的优势来进一步简化集合、数组中查找、过滤、转换等操作，这一功能称为聚合操作。
+
+
+
+### 5.1.创建Stream流对象
+
+​	获取`Stream`流对象的方式有三种。
+
+```java
+public class InitStream {
+
+    public static void main(String[] args) {
+        Integer[] arr = {20,45,67,122};
+        // 第一种：通过Arrays.stream()
+        Stream<Integer> s1 = Arrays.stream(arr);
+        s1.forEach((Integer i) -> {
+            System.out.println(i);
+        });
+
+        // 第二种：通过Stream接口的of()方法
+        Stream<String> s2 = Stream.of("aa", "bb", "cc");
+        s2.forEach((String s ) -> System.out.println(s));
+
+        // 第三种：通过单列集合
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("张三");
+        list.add("李四");
+        list.add("王五");
+        Stream<String> s3 = list.stream();
+        s3.forEach((String s) -> System.out.println(s));
+    }
+}
+```
+
+
+
+​	关于`Stream`流的方法有很多，大家可以参考API文档。
