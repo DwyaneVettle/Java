@@ -251,3 +251,142 @@ public class TestCopyBuffer {
 所需时间：
 
 ![image-20230517223421863](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305172234917.png)
+
+## 2.字节缓冲流
+
+​	上面的案例中，我们通过创建了一个字节数组作为文件拷贝的缓冲区以提交文件拷贝效率外，I/O中还提供了两个字节缓冲流来提高文件拷贝效率：`BufferedInputStream`和`BufferedOutputStream`。它们的构造方法中分别接收`InputStream`和`OutputStream`类型的参数作为对象，在读写数据时提供缓冲功能。
+
+​	缓冲流示意图：
+
+![image-20230519213216539](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305192132674.png)
+
+```java
+public class BufferedInputStreaTest {
+
+    public static void main(String[] args) throws IOException {
+        long start = System.currentTimeMillis();
+        // 1.创建对象
+        FileInputStream is = new FileInputStream("D:\\demo.wmv");
+        FileOutputStream os = new FileOutputStream("D:\\test.wmv");
+        BufferedInputStream bis = new BufferedInputStream(is);
+        BufferedOutputStream bos = new BufferedOutputStream(os);
+        // 2.读写操作
+        int i;
+        while((i = bis.read()) != -1) {
+            bos.write(i);
+        }
+        bos.close();
+        bis.close();
+        long end = System.currentTimeMillis();
+        System.out.println((end - start) / 1000);
+    }
+}
+```
+
+
+
+## 3.字符流
+
+​	除了字节流，JDK还提供了实现字符操作的字符流，同字节流一样，字符流也有两个抽象的顶级父类，分别是`Reader`和`Writer`。那么有了字节流，为什么还用字符流呢？我们用如下案例进行演示：
+
+​	我们创建一个`1.txt`文件，该文件中有4个汉字“你好你好”，并用字节流读取这几个汉字，我们发现，这几个汉字乱码了：
+
+```java
+public class Test03 {
+
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("1.txt"); // 文件和src同级
+        
+        int i;
+        while((i = fis.read()) != -1) {
+            System.out.println((char)i);
+        }
+        fis.close();
+    }
+}
+```
+
+​	乱码：
+
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305192156539.png" alt="image-20230519215649478" style="zoom:50%;" />
+
+​	出现乱码的原因是因为在ASCII码中，**一个英文字母（部分大小写字母）占一个字节空间，一个中文汉字占两个字节的空间，在UTF-8编码集中，一个中文占3个字节**。字节流只能一个字节一个字节的读取，所以出现了乱码。
+
+​	想从文件中读取字符便可以使用字符输入流`FileReader`，通过此流可以从文件中读取一个或一组字符。
+
+```java
+public class ReaderTest {
+
+    public static void main(String[] args) throws IOException {
+        FileReader fr = new FileReader("1.txt");
+        int i;
+        while((i = fr.read()) != -1) {
+            System.out.println((char)i);
+        }
+        fr.close();
+    }
+}
+```
+
+输出结果：
+
+<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305192211363.png" style="zoom:50%;" />
+
+​	
+
+​	我们发现字符流可以解决中文乱码的问题，它是通过字节流+编码表的形式进行的。
+
+​	字符流写入文件：
+
+```java
+public class WriterTest {
+
+    public static void main(String[] args) throws IOException {
+        FileWriter fw = new FileWriter("1.txt",true);
+        fw.write("\r\n哈哈");
+        fw.close();
+    }
+}
+```
+
+![image-20230519222038628](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202305192220683.png)
+
+
+
+## 4.字符缓冲流
+
+​	与字节缓冲流一样，Java也提供了字符缓冲流，以解决字符文件输入输出的效率。这两个字符输入/输出流分别为`BufferedReader`和`BufferedWriter`。`BufferedReader`提供了一个`readLine()`方法，它可以一次读取一整行字符串，`BufferedWriter`提供了一个`newLine()`方法，它可以写出回车换行，此方法具有跨平台效果（不通操作系统的回车换行符不一样，如windows为\r\n，Linux为\n）。
+
+​	我们还是以文件的拷贝为例：
+
+```java
+public class Copy {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("a.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("b.txt"));
+        
+        String line;
+        while((line = br.readLine()) != null) {
+            bw.write(line);
+        }
+        br.close();
+        bw.close();
+    }
+}
+```
+
+
+
+## 5.File类
+
+​	`File`类用于封装一个路径，这个路径可以是从系统盘符开始的绝对路径，也可以是相对于当前目录而言的相对路径。封装的路径可以指向一个文件，也可以指向一个目录，在`File`类中提供了针对这些文件或目录的一些常规操作。
+
+​	`File`类常用构造方法：
+
+| 方法                             | 说明                                                         |
+| -------------------------------- | ------------------------------------------------------------ |
+| File(String pathname)            | 通过指定字符串类型文件路径来创建一个新的File对象             |
+| File(String parent,String child) | 指定一个字符串类型的父路径和一个字符串类型子路径（包括文件名称）创建一个File对象 |
+| File(File parent,String child)   | 指定一个File类型的父路径和一个字符串类型子路径（包括文件名称）创建一个File对象 |
+
