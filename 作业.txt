@@ -32,6 +32,12 @@ https://abc.oracleoaec.com/  用户名和密码手机号
 再用Xmind总结
 
 
+week14:
+https://abc.oracleoaec.com/  用户名和密码手机号
+1.精品课程--Java编程--多线程
+再用Xmind总结
+2.案例中心--javaSE--前八个案例，补全代码，成功运行，截图
+
 
 
 

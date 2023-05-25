@@ -558,7 +558,7 @@ public class HashMapTest {
 
         System.out.println(map); // {001=张三, 002=李四, 003=老六}
 
-        System.out.println("001".hashCode()); // 和下面不通
+        System.out.println("001".hashCode()); // 和下面不同
         System.out.println("002".hashCode());
         System.out.println("通话".hashCode()); // 和下面相同
         System.out.println("重地".hashCode());
@@ -674,7 +674,7 @@ public class TreeMapTest {
 
 ### 4.4.Properties
 
-​	Map中还有一个实现类Hashtable，它和HashMap十分类似，主要区别就是**Hashtable线程是安全的**。
+​	Map中还有一个实现类HashTable，它和HashMap十分类似，主要区别就是**Hashtable线程是安全的**。
 
 ​	Hashtable还有一个子类为Properties，它主要用于存储字符串类型的键值。在实际的开发中，常使用Properties集合来存取**配置项**。
 
