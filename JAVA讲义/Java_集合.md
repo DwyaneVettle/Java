@@ -24,7 +24,7 @@
 | boolean containsAll(Collection<?> c)      | 如果此集合包含指定 `集合`中的所有元素，则返回true |
 | Iterator<E> iterator()                    | 返回此集合中的元素的迭代器                        |
 | int size()                                | 返回此集合中的元素数                              |
-| default Stream<E> stream()                | 返回以此集合作为源的顺序 `Stream`                 |
+| default Stream<E> stream()                | b返回以此集合作为源的顺序 `Stream`                |
 
 ```java
 public class CollectionTest {
