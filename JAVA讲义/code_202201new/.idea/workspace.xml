@@ -41,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../HTML/VUE/2021_01班/vue_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Springworkspace/xingying_tourism_network" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -151,6 +151,9 @@
       <workItem from="1684974350975" duration="9223000" />
       <workItem from="1684999774489" duration="24000" />
       <workItem from="1685579053859" duration="9549000" />
+      <workItem from="1685668342572" duration="4000" />
+      <workItem from="1686020432468" duration="20000" />
+      <workItem from="1686107408882" duration="545000" />
     </task>
     <servers />
   </component>

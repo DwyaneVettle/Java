@@ -1,5 +1,6 @@
 package week11;
 
+import java.util.HashMap;
 import java.util.Random;
 
 /*
@@ -15,6 +16,5 @@ public class RandomTest {
         System.out.println(rd.nextInt());
         System.out.println(rd.nextFloat());
         System.out.println(rd.nextInt(100)); // 生成0-100之间的随机数
-
     }
 }
