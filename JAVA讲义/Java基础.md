@@ -48,8 +48,6 @@
 
 借助开发工具与计算机语言制作软件
 
-![](C:\Users\HP\Desktop\01-05.files\image001.jpg)
-
 
 
 ### 1.1.5   计算机语言
@@ -138,7 +136,7 @@ cls : (clear screen)清屏
 
 https://www.tiobe.com/tiobe-index/ TIOBE语言热度排行榜
 
-![](Java基础.assets/image003.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835886.png)
 
 ### 1.2.1   Java语言发展史
 
@@ -213,7 +211,7 @@ Sun公司于1995年推出
 
   因为有了JVM，所以同一个Java程序在三个不同的操作系统中都可以执行。这样就实现了Java程序的跨平台性。也称为Java具有良好的可移植性。
 
-  ![](Java基础.assets/image006.jpg)
+  ![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835895.jpg)
 
 ## 1.3 JDK
 
@@ -255,11 +253,11 @@ JDK是 Java 语言的软件开发工具包，主要用于移动设备、嵌入�
 
 如果我们想要开发一个全新的Java程序，则必须安装jdk。
 
-![](Java基础.assets/jre和jdk的区别.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835896.png)
 
 jdk-jre-jvm的包含关系如下：
 
-![](Java基础.assets/jdkjrejvm的包含关系.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835897.png)
 
 ### 1.3.3   配置环境变量
 
@@ -271,11 +269,11 @@ jdk-jre-jvm的包含关系如下：
 
 ![]()
 
-![](Java基础.assets/image008.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835898.png)
 
-![](Java基础.assets/image010.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835900.png)
 
-![](Java基础.assets/25f0eac27fd00fdcd68c99dd5f3eab6.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835901.png)
 
 #### PATH
 
@@ -283,17 +281,17 @@ jdk-jre-jvm的包含关系如下：
 
 需要把jdk\bin添加到path中。
 
-![](Java基础.assets/image013.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835902.png)
 
 ### 1.3.4   目录介绍
 
-![](Java基础.assets/image007-1627568680305.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835903.png)
 
 ### 1.3.5	检测是否安装配置好JDK
 
 windows+R 输入cmd，再输入命令java -version ，出现一下界面说明已经配置成功
 
-![](Java基础.assets/5dfcf524eaebfedc9e27dca4c09a478.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835904.png)
 
 
 
@@ -305,7 +303,7 @@ Java程序开发分为三个步骤：**编写，编译，运行**。
 
 
 
-![](Java基础.assets/Java程序运行的3个步骤.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835906.png)
 
 ## 2.2 	编写Java源程序
 
@@ -332,9 +330,9 @@ public class HelloWorld {
 javac java源文件.后缀名
 ```
 
-![](Java基础.assets/编译HelloWorld.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835907.png)
 
-![](Java基础.assets/编译后.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835908.png)
 
 编译成功后，命令没有任何的提示，只是在源文件目录多了一个HelloWorld.class的文件，这个就是Java可以运行的文件，称为**字节码文件**，字节码文件就可以实现Java的跨平台性。
 
@@ -350,7 +348,7 @@ javac java源文件.后缀名
 java 类名
 ```
 
-![](Java基础.assets/运行Java文件.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835909.png)
 
 ```
 运行字节码文件的工具为java.exe，在JDK安装目录下的bin目录下.
@@ -403,7 +401,7 @@ public class HelloWorld {
 
 ## 2.6	编译和运行的区别
 
-![](Java基础.assets/image033.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835910.png)
 
 - **编译**：指将我们写好的Java源文件翻译成JVM认识的class文件，javac编译器会检查我们的程序是否有错，有则提示，没有则编译成功；
 - **运行**：指将class字节码文件，交给JVM去运行。 
@@ -422,7 +420,7 @@ public class HelloWorld {
   7. 变量名规范：全部小写。
 - **关键字**:在Java中已经被赋予特定含义的单词，一共由53个，其中有两个保留字:const和goto。关键字不能被用作标识符。
 
-![](Java基础.assets/image036.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835911.png)
 
 - **变量**：在JAVA中，有的数据值是不固定的，总在变，我们还需要记录这些值，我们可以把这些值理解为变量。
 
@@ -448,11 +446,11 @@ public class HelloWorld {
 
 **IDEA官方下载地址：https://www.jetbrains.com/idea/download/#section=windows**
 
-![](Java基础.assets/idea下载.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835912.png)
 
 **IDEA创建项目的等级结构划分**
 
-![](Java基础.assets/项目.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835913.png)
 
 创建java类的步骤:
 
@@ -488,7 +486,7 @@ public class HelloWorld {
 
 位bit  	字节byte	 1byte = 8bit
 
-![](Java基础.assets/8大基本类型.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835914.png)
 
 **变量的定义三个要素：数据类型，变量名，变量值**
 
@@ -607,7 +605,7 @@ Byte a = 120;
 int b = a;
 ```
 
-![](Java基础.assets/隐式转换.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835915.png)
 
 ## 4.2	大转小--显示转换（强制转换）
 
@@ -1052,7 +1050,7 @@ public class Test5_方法重载 {
 
 顺序结构的程序虽然能解决计算，输出等问题，但是不能做判断选择。对于要判断再选择的问题，就要使用分支结构。
 
-![](Java基础.assets/02-单if语句的流程图.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835916.png)
 
 ### 8.1.2	格式
 
@@ -1098,9 +1096,9 @@ if(判断条件1){
 }
 ```
 
-![](Java基础.assets/03-标准if-else语句的流程图.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835917.png)
 
-![04-扩展if-else语句的流程图](Java基础.assets/04-扩展if-else语句的流程图.png)
+![04-扩展if-else语句的流程图](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835918.png)
 
 ### 8.1.3	练习1：商品打折
 
@@ -1175,7 +1173,7 @@ public class aa {
 
 当一个case成立，从这个case向后穿透所有的case，包括default，直到程序结束或者遇到break结束。
 
-![](Java基础.assets/switch.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835919.png)
 
 - 执行流程 
   - 首先计算出表达式的值 ；
@@ -1245,7 +1243,7 @@ public class Test1_数字匹配 {
 
 根据判断条件,循环结构又可细分为先判断后执行的循环结构和先执行后判断的循环结构。
 
-![](Java基础.assets/05-for循环的流程图.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835920.png)
 
 - 执行流程：
   - 执行顺序：①②③④>②③④>②③④…②不满足为止。
@@ -1264,7 +1262,7 @@ for(开始条件1；循环条件2；更改条件4){
 
 ### 8.3.3	练习1：从0打印到10
 
-![](Java基础.assets/image039.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835921.png)
 
 ```
 public class ttttt {
@@ -1415,7 +1413,7 @@ while(布尔表达式②){
   - ③具体执行的语句
   - ④循环后，循环变量的变化情况。
 
-![](Java基础.assets/06-while循环的流程图.png)
+![](https://gitee.com/zou_tangrui/note-pic/raw/master/img/202310171835922.png)
 
 ### 8.5.2	练习1：输出10次HelloWorld
 
