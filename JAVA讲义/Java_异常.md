@@ -29,7 +29,7 @@ public class Test01 {
 - **Error**：表示不希望被程序捕获或是程序无法处理的错误；
 - **Exception：**表示用户程序可能捕获到的异常情况或者是程序可以处理的异常。
 
-<img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202304071206222.png" style="zoom:50%;" />
+<img src="C:\Users\HP\Desktop\202304071206222.png" style="zoom:50%;" />
 
 <img src="https://gitee.com/zou_tangrui/note-pic/raw/master/img/202304071208254.png" style="zoom:50%;" />	
 
