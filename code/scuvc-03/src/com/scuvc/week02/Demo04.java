@@ -22,7 +22,7 @@ public class Demo04 {
         method01();
         int i = new Scanner(System.in).nextInt();
         method02(i);
-        method03()
+        // method03();
     }
     public static String method01() {
         // return表示这个方法已经返回了值，在此后面的代码没有意义

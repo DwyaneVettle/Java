@@ -28,39 +28,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Demo01.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Demo02.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Demo03.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Demo04.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.scuvc.week02.Demo01.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/笔记/Java/code/scuvc-03&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/笔记/Java/code/scuvc-03/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Demo01.executor": "Run",
+    "Application.Demo02.executor": "Run",
+    "Application.Demo03.executor": "Run",
+    "Application.Demo04.executor": "Run",
+    "Application.Demo05.executor": "Run",
+    "Application.Demo06.executor": "Run",
+    "Application.Demo07.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test01.executor": "Run",
+    "Application.com.scuvc.week02.Demo01.executor": "Run",
+    "Application.com.scuvc.week03.Demo02.executor": "Debug",
+    "Application.com.scuvc.week03.Demo03.executor": "Run",
+    "Application.com.scuvc.week03.Demo04.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/笔记/Java/code/scuvc-03",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/笔记/Java/code/scuvc-03/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Demo04">
-    <configuration name="Demo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week01.Demo01" />
+}]]></component>
+  <component name="RunManager" selected="Application.Demo07">
+    <configuration name="Demo05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo05" />
       <module name="scuvc-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week01.*" />
+          <option name="PATTERN" value="com.scuvc.week03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week02.Demo02" />
+    <configuration name="Demo06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo06" />
       <module name="scuvc-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week02.*" />
+          <option name="PATTERN" value="com.scuvc.week03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week02.Demo03" />
+    <configuration name="Demo07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo07" />
       <module name="scuvc-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week02.*" />
+          <option name="PATTERN" value="com.scuvc.week03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week02.Demo04" />
+    <configuration name="com.scuvc.week03.Demo03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo03" />
       <module name="scuvc-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week02.*" />
+          <option name="PATTERN" value="com.scuvc.week03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.scuvc.week02.Demo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week02.Demo01" />
+    <configuration name="com.scuvc.week03.Demo04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo04" />
       <module name="scuvc-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week02.*" />
+          <option name="PATTERN" value="com.scuvc.week03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo04" />
-        <item itemvalue="Application.Demo03" />
-        <item itemvalue="Application.Demo02" />
-        <item itemvalue="Application.com.scuvc.week02.Demo01" />
-        <item itemvalue="Application.Demo01" />
+        <item itemvalue="Application.Demo07" />
+        <item itemvalue="Application.Demo06" />
+        <item itemvalue="Application.Demo05" />
+        <item itemvalue="Application.com.scuvc.week03.Demo04" />
+        <item itemvalue="Application.com.scuvc.week03.Demo03" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +156,10 @@
       <workItem from="1773126246150" duration="584000" />
       <workItem from="1773294824317" duration="11771000" />
       <workItem from="1773726551316" duration="1846000" />
+      <workItem from="1773737904135" duration="84000" />
+      <workItem from="1773889687691" duration="259000" />
+      <workItem from="1773899724333" duration="4994000" />
+      <workItem from="1773905357226" duration="5140000" />
     </task>
     <servers />
   </component>
