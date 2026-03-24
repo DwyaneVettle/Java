@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61d6626c-1f25-4990-bc72-9d4a032d7d68" name="Changes" comment="" />
+    <list default="true" id="61d6626c-1f25-4990-bc72-9d4a032d7d68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo07.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +32,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="3AkBkr2ln2YJCfA3DmMhP6yUCwk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +47,7 @@
     "Application.Demo04.executor": "Run",
     "Application.Demo05.executor": "Run",
     "Application.Demo06.executor": "Run",
+    "Application.Demo07.executor": "Run",
     "Application.com.scuvc.week03.Demo01.executor": "Run",
     "Application.com.scuvc.week03.Demo02.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -52,13 +64,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Demo06">
+  <component name="RunManager" selected="Application.Demo07">
     <configuration name="Demo03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo03" />
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo03" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week03.*" />
+          <option name="PATTERN" value="com.scuvc.week04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,11 +79,11 @@
       </method>
     </configuration>
     <configuration name="Demo04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo04" />
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo04" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week03.*" />
+          <option name="PATTERN" value="com.scuvc.week04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +92,11 @@
       </method>
     </configuration>
     <configuration name="Demo05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo05" />
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo05" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week03.*" />
+          <option name="PATTERN" value="com.scuvc.week04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,11 +105,11 @@
       </method>
     </configuration>
     <configuration name="Demo06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo06" />
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo06" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week03.*" />
+          <option name="PATTERN" value="com.scuvc.week04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.scuvc.week03.Demo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week03.Demo02" />
+    <configuration name="Demo07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo07" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week03.*" />
+          <option name="PATTERN" value="com.scuvc.week04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo07" />
         <item itemvalue="Application.Demo06" />
         <item itemvalue="Application.Demo05" />
         <item itemvalue="Application.Demo04" />
         <item itemvalue="Application.Demo03" />
-        <item itemvalue="Application.com.scuvc.week03.Demo02" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +158,7 @@
       <workItem from="1773126840602" duration="5230000" />
       <workItem from="1773294778327" duration="41000" />
       <workItem from="1773726573164" duration="9458000" />
+      <workItem from="1774330948738" duration="9646000" />
     </task>
     <servers />
   </component>
