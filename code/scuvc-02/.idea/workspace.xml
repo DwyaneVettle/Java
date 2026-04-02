@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61d6626c-1f25-4990-bc72-9d4a032d7d68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo04.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo06.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week04/Demo07.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week05/Demo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week05/Demo02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/scuvc/week05/Demo03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scuvc-03/src/com/scuvc/week04/Demo01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scuvc-03/src/com/scuvc/week04/Demo02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scuvc-03/src/com/scuvc/week04/Demo03.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,64 +38,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Demo01.executor": "Run",
-    "Application.Demo02.executor": "Run",
-    "Application.Demo03.executor": "Run",
-    "Application.Demo04.executor": "Run",
-    "Application.Demo05.executor": "Run",
-    "Application.Demo06.executor": "Run",
-    "Application.Demo07.executor": "Run",
-    "Application.com.scuvc.week03.Demo01.executor": "Run",
-    "Application.com.scuvc.week03.Demo02.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/笔记/Java/code/scuvc-02/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Demo01.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo02.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo03.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo04.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo05.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo06.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Demo07.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.scuvc.week03.Demo01.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.scuvc.week03.Demo02.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/笔记/Java/code/scuvc-02/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Demo07">
+}</component>
+  <component name="RunManager" selected="Application.Demo03">
+    <configuration name="Demo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week05.Demo01" />
+      <module name="scuvc-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scuvc.week05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week05.Demo02" />
+      <module name="scuvc-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scuvc.week05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demo03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo03" />
+      <option name="MAIN_CLASS_NAME" value="com.scuvc.week05.Demo03" />
       <module name="scuvc-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.scuvc.week04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo04" />
-      <module name="scuvc-02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scuvc.week04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.scuvc.week04.Demo05" />
-      <module name="scuvc-02" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.scuvc.week04.*" />
+          <option name="PATTERN" value="com.scuvc.week05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo03" />
+        <item itemvalue="Application.Demo02" />
+        <item itemvalue="Application.Demo01" />
         <item itemvalue="Application.Demo07" />
         <item itemvalue="Application.Demo06" />
-        <item itemvalue="Application.Demo05" />
-        <item itemvalue="Application.Demo04" />
-        <item itemvalue="Application.Demo03" />
       </list>
     </recent_temporary>
   </component>
@@ -159,6 +158,8 @@
       <workItem from="1773294778327" duration="41000" />
       <workItem from="1773726573164" duration="9458000" />
       <workItem from="1774330948738" duration="9646000" />
+      <workItem from="1774503663445" duration="23000" />
+      <workItem from="1774936299166" duration="7579000" />
     </task>
     <servers />
   </component>
